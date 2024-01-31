@@ -36,10 +36,7 @@
   <body>
     <div class="preloader">
       <div class="lds-ripple">
-        <img
-          src="/assets/images/preloader.gif"
-          alt="title"
-        />
+        <img src="/assets/images/preloader.gif" alt="title" />
       </div>
     </div>
     <!--  ====================== Header Area =============================  -->
@@ -191,7 +188,7 @@
         <div class="row align-items-center">
           <div class="col-md-10">
             <div class="shadow bg-white p-3 rounded">
-              <form class="contact-form">
+              <form class="contact-form" id="contact-form">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="mb-3">
@@ -199,78 +196,60 @@
                         >Restaurant Name
                         <span class="text-danger">*</span></label
                       >
-                      <input type="text" id="name" class="form-control" />
+                      <input type="text" name="name" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label class="mb-2" for="oname"
+                        >Owner Name <span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        name="oname"
+                        id="oname"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label class="mb-2" for="number"
+                        >Mobile Number<span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="number"
+                        name="number"
+                        id="number"
+                        class="form-control"
+                      />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="mb-3">
                       <label class="mb-2" for="email"
-                        >Email <span class="text-danger">*</span></label
-                      >
-                      <input type="email" id="email" class="form-control" />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label for="Logo-Upload" class="form-label"
-                        >Logo Upload</label
+                        >Email<span class="text-danger">*</span></label
                       >
                       <input
+                        type="email"
+                        name="email"
+                        id="email"
                         class="form-control"
-                        type="file"
-                        id="Logo-Upload"
                       />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="mb-3">
-                      <label class="mb-2" for="Food"
-                        >Food Menu <span class="text-danger">*</span></label
-                      >
-                      <select class="form-select">
-                        <option selected>Select Food</option>
-                        <option value="1">-- Mushroom pizza</option>
-                        <option value="2">-- Sauce Pizza</option>
-                        <option value="2">-- Olive Pizza</option>
-                        <option value="2">-- Chicken Pizza</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="mb-2" for="Website"
-                        >Website URL <span class="text-danger">*</span></label
-                      >
-                      <input type="url" id="Website" class="form-control" />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="mb-2" for="appt"
-                        >Opening Time <span class="text-danger">*</span></label
+                      <label class="mb-2" for="email"
+                        >Restaurant Address<span class="text-danger"
+                          >*</span
+                        ></label
                       >
                       <input
+                        type="text"
+                        name="address"
+                        id="address"
                         class="form-control"
-                        type="time"
-                        id="appt"
-                        name="appt"
-                        min="18:00"
-                        max="09:00"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="mb-2" for="appt2"
-                        >Closing Time <span class="text-danger">*</span></label
-                      >
-                      <input
-                        class="form-control"
-                        type="time"
-                        id="appt2"
-                        name="appt2"
-                        min="09:00"
-                        max="18:00"
                       />
                     </div>
                   </div>
@@ -404,6 +383,24 @@
         s.async = 1;
         d.getElementsByTagName("head")[0].appendChild(s);
       })();
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init("preor_email_service"); // Replace with your EmailJS User ID
+
+      function sendEmail() {
+        const form = document.getElementById("contact-form");
+        const formData = new FormData(form);
+
+        emailjs.send("preor_email_service", "template_rsebpra", formData).then(
+          (response) => {
+            console.log("Email sent successfully:", response);
+          },
+          (error) => {
+            console.error("Email sending failed:", error);
+          }
+        );
+      }
     </script>
   </body>
 

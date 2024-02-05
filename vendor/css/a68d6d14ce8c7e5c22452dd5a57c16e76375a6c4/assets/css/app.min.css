@@ -2598,6 +2598,16 @@ progress {
     margin-right: 25px;
   }
 }
+
+.zoom-img {
+  max-width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.zoom-img:hover {
+  transform: scale(1.2); /* You can adjust the scale factor as needed */
+}
 .list-unstyled {
   padding-left: 0;
   list-style: none;

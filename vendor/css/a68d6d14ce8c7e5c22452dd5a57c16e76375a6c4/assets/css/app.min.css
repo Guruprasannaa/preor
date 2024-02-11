@@ -15871,7 +15871,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .about-image::before {
   content: "";
-  background-image: url(https://d33wubrfki0l68.cloudfront.net/4b2c8b05e0708d5ee5f9199337397493f1bcf79d/c3b2a/assets/images/about-mask-shape.svg);
+  background-image: url(/assets/images/happy.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
@@ -18025,6 +18025,51 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     text-align: center;
     font-size: 10px;
   }
+}
+
+.social-icons-btn {
+  display: flex;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: #111;
+  margin: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 
+    0 2px 2px #d1d1d1;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    all 0.15s ease;
+}
+.twitter:hover {
+  color: white;
+  background: #00ECEE;
+}
+.facebook:hover {
+  color: white;
+  background: #4267B2;
+}
+.instagram:hover {
+  color: white;
+  background-image: 
+    linear-gradient(
+    #8a3ab9,
+    #e95950, 
+    #bc2a8d, 
+    #fccc63
+    );
+}
+.linkedin:hover {
+  color: white;
+  background: #0A66C2;
 }
 .shareLink .permalink .copyLink:hover:after {
   opacity: 1;

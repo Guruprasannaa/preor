@@ -15875,6 +15875,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-top: none; /* Remove top border for the list group */
 }
 
+.location {
+  font-size: 15px;
+}
+
 .vendor-req .list-group-item {
   display: flex; /* Use flexbox for better alignment */
   align-items: center; /* Center items vertically */

@@ -2609,7 +2609,7 @@ progress {
 }
 
 .footer > * {
-  flex:  1 100%;
+  flex: 1 100%;
 }
 
 .footer__addr {
@@ -2655,7 +2655,7 @@ progress {
   font-size: 1rem;
 }
 
-.footer-link:hover{
+.footer-link:hover {
   color: #edea2e !important;
 }
 
@@ -2674,7 +2674,7 @@ progress {
 
 .footer__nav {
   display: flex;
-	flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .footer__nav > * {
@@ -2696,7 +2696,7 @@ progress {
   flex-wrap: wrap;
   color: #999;
 }
-  
+
 .legal__links {
   display: flex;
   align-items: center;
@@ -2716,15 +2716,15 @@ progress {
   .footer__nav > * {
     flex: 1;
   }
-  
+
   .nav__item--extra {
     flex-grow: 2;
   }
-  
+
   .footer__addr {
     flex: 1 0px;
   }
-  
+
   .footer__nav {
     flex: 2 0px;
   }
@@ -15865,6 +15865,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   left: 0;
   margin-top: 3px;
 }
+.card {
+  border-radius: 15px; /* Adjust the border-radius for rounded corners */
+  border: 1px solid #ccc; /* Add a border for better visibility */
+  box-shadow: 4px 2px 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for elevation */
+}
+
+.vendor-req .list-group {
+  border-top: none; /* Remove top border for the list group */
+}
+
+.vendor-req .list-group-item {
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Adjust the padding as needed */
+  border-bottom: none; /* Remove bottom border for each list item */
+}
+
+.vendor-req .list-group-item svg {
+  margin-right: 10px; /* Optional: Adjust the spacing between icon and text */
+}
+
 .about-image {
   position: relative;
   margin-left: 30px;
@@ -18042,34 +18063,26 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: 
-    0 2px 2px #d1d1d1;
+  box-shadow: 0 2px 2px #d1d1d1;
   color: #fff;
   cursor: pointer;
-  transition:
-    all 0.15s ease;
+  transition: all 0.15s ease;
 }
 .twitter:hover {
   color: white;
-  background: #00ECEE;
+  background: #00ecee;
 }
 .facebook:hover {
   color: white;
-  background: #4267B2;
+  background: #4267b2;
 }
 .instagram:hover {
   color: white;
-  background-image: 
-    linear-gradient(
-    #8a3ab9,
-    #e95950, 
-    #bc2a8d, 
-    #fccc63
-    );
+  background-image: linear-gradient(#8a3ab9, #e95950, #bc2a8d, #fccc63);
 }
 .linkedin:hover {
   color: white;
-  background: #0A66C2;
+  background: #0a66c2;
 }
 .shareLink .permalink .copyLink:hover:after {
   opacity: 1;

@@ -15894,8 +15894,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   position: relative;
   margin-left: 30px;
 }
-.about-image::before {
-  content: "";
+.about-image {
+  /* content: ""; */
   background-image: url(/assets/images/happy.png);
   background-repeat: no-repeat;
   background-size: contain;
